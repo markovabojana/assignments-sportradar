@@ -43,7 +43,7 @@ export default class MatchCarousel extends React.Component {
             this.setState(prevState => ({
                 currentMatchIndex: (prevState.currentMatchIndex + 1) % prevState.matches.length
             }));
-        }, 3022200);
+        }, 3000);
 
         this.setState({ autoplayIntervalId });
     }

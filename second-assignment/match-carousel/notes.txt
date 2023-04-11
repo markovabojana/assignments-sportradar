@@ -1,0 +1,30 @@
+Files/Folders in 'src/' Folder
+
+1. 'index.js': The entry point of the application that initializes and starts the server.
+2. 'assets/': A folder that contains static files such as images and fonts.
+3. 'components/': A folder that contains reusable UI components that can be used across
+multiple pages or sections of the application.
+4. 'services/': A folder that contains modules responsible for handling specific
+functionality such as data fetching.
+5. 'App.js': The parent component.
+6. 'App.css': Stylesheet for the App.js component.
+7. 'MatchCarousel.js': A component for displaying the carousel and is parent of Card.js.
+8. 'MatchCarousel.css:': Stylesheet for the MatchCarousel.js component.
+9. 'Card.js': A component for displaying the match card.
+10. 'Card.css': Stylesheet for the Card.js component.
+11. 'LoadingSpinner.js': A component for displaying a spinner when loading state of the carousel.
+12. 'LoadingSpinner.css': Stylesheet for the LoadingSpinner.js.
+13. 'services.js': API calls
+
+Dependencies in package.json
+
+1. No other libraries than react base packages (react, react-dom, react-scripts).
+
+Known issues
+
+1. Team names are too large and in some cases the card is getting too large.
+2. One of the edge cases that is not covered:
+    - All statuses other than 0 and 100 are indicating that the match is started (per documentation),
+     but when status is "Postponed", the result is not shown on the card. Date should be shown for the
+     future match date.
+3. URL for obtaining png images for team/country flags does not work.
