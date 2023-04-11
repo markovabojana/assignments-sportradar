@@ -1,0 +1,59 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url("../assets/OpenSans-VariableFont.ttf");
+}
+
+html {
+    font-size: 100%;
+}
+
+/* Reset styles */
+* {
+    font-family: "Open Sans", sans-serif;
+    font-weight: lighter;
+    color: white;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+body {
+    text-align: center;
+    margin: 20px auto 0;
+}
+
+.title {
+    font-size: 4rem;
+    color: black;
+}
+
+.tab-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 20px;
+    background-color: gray;
+    border-radius: 5px 5px 0 0;
+}
+
+.tab.active {
+    background-color: black;
+}
+
+.tab-content-container {
+    padding: 20px;
+    border-radius: 0 5px 5px 5px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}

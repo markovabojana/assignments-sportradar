@@ -1,0 +1,209 @@
+h1 {
+    font-size: 1.3rem;
+}
+
+h2 {
+    font-size: 0.9rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+h4 {
+    font-size: 0.7rem;
+}
+
+.match-card {
+    position: relative;
+}
+
+.bg-opacity{
+    width: 320px;
+    padding: 0.3rem 0 1.2rem 0;
+    border-radius: 7px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #000;
+}
+
+.bg-opacity::before{
+    border-radius: 7px;
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.35;
+    background: url('../assets/bg-postmatch.jpg') no-repeat;
+    background-position-y: -12px;
+    background-position-x: center;
+    background-size: 870px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+.match-dt {
+    font-size: 2rem;
+}
+
+.match-dt p:last-child {
+    font-size: 1.4rem;
+}
+
+.result {
+    font-size: 2.3rem;
+}
+
+.match-countries > * {
+    width: 33.33%;
+}
+
+.country img {
+    width: 45px;
+    height: 30px;
+}
+
+.country h1 {
+    text-transform: uppercase;
+}
+
+.country h1 span {
+    display: none;
+}
+
+.match-countries {
+    margin-top: 1rem;
+}
+
+.match-status {
+    margin-top: 1rem;
+}
+
+.match-status span {
+    border-radius: 4px;
+    text-transform: uppercase;
+    padding: 1px 23px;
+    font-size: 0.5rem;
+}
+
+.match-status span.notstarted {
+    background-color: gray;
+}
+
+.match-status span.ended {
+    background-color: green;
+}
+
+.match-status span.live {
+    background-color: orange;
+}
+
+@media only screen and (min-width: 320px) {
+}
+
+@media only screen and (min-width: 450px) {
+    .bg-opacity {
+        width: 450px;
+        padding: 0.5rem 0 1.5rem 0;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h4 {
+        font-size: 0.8rem;
+    }
+
+    .country h1 {
+        font-size: 1.5rem;
+        text-transform: none;
+    }
+
+    .country h1 span {
+        display: inline-block;
+    }
+
+    .country img {
+        width: 5rem;
+        height: 3.5rem;
+    }
+
+    .match-countries {
+        margin-top: 2rem;
+    }
+
+    .result {
+        font-size: 3.7rem;
+    }
+
+    .match-status {
+        margin-top: 1.5rem;
+    }
+
+    .match-status span {
+        padding: 1px 30px;
+        font-size: 0.7rem;
+    }
+}
+
+@media only screen and (min-width: 870px) {
+    .bg-opacity {
+        width: 870px;
+        padding: 0.8rem 0 2.6rem 0;
+        border-radius: 15px;
+    }
+
+    .bg-opacity::before {
+        border-radius: 15px;
+        background-size: 200%;
+    }
+
+    .row {
+        padding: 0 20px
+    }
+
+    h2 {
+        font-size: 2.4rem;
+    }
+
+    h4 {
+        font-size: 1.4rem;
+    }
+
+    .country h1 {
+        padding-top: 0.5rem;
+        font-size: 3rem;
+        white-space: pre-wrap;
+    }
+
+    .country img {
+        width: 8.2rem;
+        height: 6rem;
+    }
+
+    .result {
+        font-size: 6rem;
+    }
+
+    .match-status {
+        padding-top: 1rem;
+    }
+
+    .match-status span {
+        font-size: 1rem;
+        padding: 2px 45px;
+    }
+
+    .match-countries {
+        margin-top: 3rem;
+    }
+}
