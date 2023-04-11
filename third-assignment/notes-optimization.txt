@@ -1,0 +1,8 @@
+Not much can be done on the frontend side, regarding data, since backend is sending the whole json object,
+but there are still some improvements that we can do on the frontend.
+Some of the optimizations are:
+    - Multiple stylesheet files for different screen sizes. If we put media queries in one css file, the whole css file should be returned from the server.
+    - Minification of css and js, so the size can be smaller.
+    - Bundling multiple files in one file in order to make only one request instead of multiple.
+    - Lazy loading to load carousels on demand.
+    - Using Service Worker API for better performance like caching and offline experience.

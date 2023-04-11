@@ -31,18 +31,27 @@ export default class MatchCarousel extends React.Component {
                     isLoading: false
                 })
             })
-        this.startAutoplay();
+        this.startAutoplay()
     }
 
     componentWillUnmount() {
         this.stopAutoplay();
     }
 
+    componentDidUpdate(prevProps, prevState) {
+        if (
+            prevState.currentMatchIndex !== this.state.currentMatchIndex ||
+            prevState.matches.length !== this.state.matches.length
+        ) {
+            this.stopAutoplay();
+            this.startAutoplay();
+        }
+    }
+
     startAutoplay = () => {
         const autoplayIntervalId = setInterval(() => {
-            this.setState(prevState => ({
-                currentMatchIndex: (prevState.currentMatchIndex + 1) % prevState.matches.length
-            }));
+            const nextMatchIndex = (this.state.currentMatchIndex + 1) % this.state.matches.length;
+            this.setState({ currentMatchIndex: nextMatchIndex });
         }, 3000);
 
         this.setState({ autoplayIntervalId });
